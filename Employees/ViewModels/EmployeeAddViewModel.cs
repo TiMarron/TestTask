@@ -25,9 +25,11 @@ namespace Employees.ViewModels
         public string Sex { get; set; }
         [Required(ErrorMessage = "Укажите отдел!")]
         [DisplayName("Отдел")]
+        public int DepartmentId { get; set; }
         public virtual IEnumerable<SelectListItem> DepartmentSelectList { get; set; }
         [Required(ErrorMessage = "Укажите язык!")]
         [DisplayName("Язык")]
+        public int ProgrammingLanguageId { get; set; }
         public virtual IEnumerable<SelectListItem> ProgrammingLanguageSelectList { get; set; }
     }
 }

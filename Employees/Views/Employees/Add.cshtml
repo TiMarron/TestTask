@@ -38,15 +38,15 @@
             <div class="lable">
                 @Html.LabelFor(m => m.DepartmentSelectList)
             </div>
-            @Html.DropDownListFor(m => m.DepartmentSelectList, Model.DepartmentSelectList)
-            @Html.ValidationMessageFor(m => m.DepartmentSelectList)
+            @Html.DropDownListFor(m => m.DepartmentId, Model.DepartmentSelectList)
+            @Html.ValidationMessageFor(m => m.DepartmentId)
         </div>
         <div>
             <div class="lable">
-                @Html.LabelFor(m => m.ProgrammingLanguageSelectList)
+                @Html.LabelFor(m => m.ProgrammingLanguageId)
             </div>
-            @Html.DropDownListFor(m => m.ProgrammingLanguageSelectList, Model.ProgrammingLanguageSelectList)
-            @Html.ValidationMessageFor(m => m.ProgrammingLanguageSelectList)
+            @Html.DropDownListFor(m => m.ProgrammingLanguageId, Model.ProgrammingLanguageSelectList)
+            @Html.ValidationMessageFor(m => m.ProgrammingLanguageId)
         </div>
         <div>
             <input type="submit" value="Добавить"/>

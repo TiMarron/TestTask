@@ -66,8 +66,8 @@ namespace Employees.Controllers
             employee.SecondName = model.SecondName;
             employee.Sex = model.Sex;
             employee.Years = model.Years;
-            employee.DepartmentId = int.Parse(Request.Form["DepartmentSelectList"]);
-            employee.ProgrammingLanguageId = int.Parse(Request.Form["ProgrammingLanguageSelectList"]);
+            employee.DepartmentId = model.DepartmentId;
+            employee.ProgrammingLanguageId = model.ProgrammingLanguageId;
             db.Employees.Add(employee);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -114,8 +114,8 @@ namespace Employees.Controllers
             employee.SecondName = model.SecondName;
             employee.Sex = model.Sex;
             employee.Years = model.Years;
-            employee.DepartmentId = int.Parse(Request.Form["DepartmentSelectList"]);
-            employee.ProgrammingLanguageId = int.Parse(Request.Form["ProgrammingLanguageSelectList"]);
+            employee.DepartmentId = model.DepartmentId;
+            employee.ProgrammingLanguageId = model.ProgrammingLanguageId;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
