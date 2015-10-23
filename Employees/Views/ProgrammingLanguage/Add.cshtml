@@ -1,0 +1,20 @@
+﻿@model Employees.ViewModels.ProgrammingLanguageViewModel
+@{
+    ViewBag.Title = "Добавление языка программирования";
+    Layout = "~/Views/Shared/_BaseView.cshtml";
+}
+
+<h2>Добавление языка программирования</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        <div class="lable">@Html.LabelFor(m => m.Name)</div>
+        @Html.EditorFor(m => m.Name)
+    </div>
+    <div>
+        <input type="submit" value="Добавить"/>
+        <a href="/">Вернуться на главную</a>
+    </div>
+}
+
