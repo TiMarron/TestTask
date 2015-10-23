@@ -11,23 +11,23 @@ namespace Employees.ViewModels
 {
     public class EmployeeAddViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Give the man a name")]
         [DisplayName("Имя")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите фамилию!")]
         [DisplayName("Фамилия")]
         public string SecondName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите возраст!")]
         [DisplayName("Возраст")]
         public int Years { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите пол!")]
         [DisplayName("Пол")]
         public string Sex { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите отдел!")]
         [DisplayName("Отдел")]
-        public IEnumerable<SelectListItem> DepartmentSelectList { get; set; }
-        [Required]
+        public virtual IEnumerable<SelectListItem> DepartmentSelectList { get; set; }
+        [Required(ErrorMessage = "Укажите язык!")]
         [DisplayName("Язык")]
-        public IEnumerable<SelectListItem> ProgrammingLanguageSelectList { get; set; }
+        public virtual IEnumerable<SelectListItem> ProgrammingLanguageSelectList { get; set; }
     }
 }

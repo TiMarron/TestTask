@@ -9,10 +9,10 @@ namespace Employees.ViewModels
 {
     public class DepartmentViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Укажите название отдела!")]
         [DisplayName("Название")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите этаж!")]
         [DisplayName("Этаж, №")]
         public int Floor { get; set; }
     }
