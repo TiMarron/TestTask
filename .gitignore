@@ -1,9 +1,15 @@
 
-/TimProject/PersonalConnection.config
-/TimProject/ckfinder/_source/bin
-/TimProject/ckfinder/_source/obj
-/TimProject/App_Data/cache
-/TimProject/ckfinder/_source/CKFinder.Net.csproj.user
+/Employees/PersonalConnection.config
+###############
+# Directories #
+###############
+/Employees/bin/
+/Employees/obj/
+/Employees/TestResults/
+/Employees/ckfinder/_source/bin
+/Employees/ckfinder/_source/obj
+/Employees/App_Data/cache
+/Employees/ckfinder/_source/CKFinder.Net.csproj.user
 
 
 ###################
@@ -27,12 +33,7 @@
 ####################
 UpgradeLog.XML
 _UpgradeReport_Files/
-###############
-# Directories #
-###############
-bin/
-obj/
-TestResults/
+
 ###################
 # Web publish log #
 ###################
