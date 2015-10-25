@@ -41,3 +41,10 @@ c:\users\timar\onedrive\документы\visual studio 2015\Projects\Employees
 c:\users\timar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\obj\Debug\Employees.csprojResolveAssemblyReference.cache
 c:\users\timar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\obj\Debug\Employees.dll
 c:\users\timar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\obj\Debug\Employees.pdb
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\Antlr3.Runtime.dll
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\Newtonsoft.Json.dll
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\System.Web.Optimization.dll
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\WebGrease.dll
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\Antlr3.Runtime.pdb
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\Newtonsoft.Json.xml
+C:\Users\TiMar\onedrive\документы\visual studio 2015\Projects\Employees\Employees\bin\System.Web.Optimization.xml
