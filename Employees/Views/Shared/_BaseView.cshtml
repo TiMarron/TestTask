@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,9 +16,11 @@
         <li>@Html.ActionLink("Добавить отдел", "Add", "Department")</li>
     </ul>
 </nav>
-    <div class="content">
-        @RenderBody()
-    </div>
+<div class="content">
+    @RenderBody()
+</div>
+    @Scripts.Render("~/bundles/js/jquery")
+    @Scripts.Render("~/bundles/js/Employees/autocomplite")
 </body>
 </html>
 
