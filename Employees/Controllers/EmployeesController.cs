@@ -133,11 +133,20 @@ namespace Employees.Controllers
             return Json(names, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult AutocompleteSearch(string term)
+        public ActionResult AutocompleteName(string term)
         {
             var models = db.Employees.Where(e => e.Name.StartsWith(term)).Select(e => e.Name).ToList();
+            List<string> modelsList = new List<string>(models.Distinct());
 
-            return Json(models, JsonRequestBehavior.AllowGet);
+            return Json(modelsList, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult AutocompleteSecondName(string term)
+        {
+            var models = db.Employees.Where(e => e.SecondName.StartsWith(term)).Select(e => e.SecondName).ToList();
+            List<string> modelsList = new List<string>(models.Distinct());
+
+            return Json(modelsList, JsonRequestBehavior.AllowGet);
         }
     }
 }

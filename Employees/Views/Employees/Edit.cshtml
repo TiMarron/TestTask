@@ -11,14 +11,14 @@
         @Html.ValidationSummary()
         <div>
             <div class="lable">@Html.LabelFor(m => m.Name)</div>
-            @Html.EditorFor(m => m.Name)
+            <input class="text-box single-line" data-val="true" id="Name" name="Name" type="text" value="" data-autocomplete-source='@Url.Action("AutocompleteName", "Employees")'>
             @Html.ValidationMessageFor(m => m.Name)
         </div>
         <div>
             <div class="lable">
                 @Html.LabelFor(m => m.SecondName)
             </div>
-            @Html.EditorFor(m => m.SecondName)
+            <input class="text-box single-line" data-val="true" id="SecondName" name="SecondName" type="text" value="" data-autocomplete-source='@Url.Action("AutocompleteSecondName", "Employees")'>
             @Html.ValidationMessageFor(m => m.SecondName)
         </div>
         <div>
