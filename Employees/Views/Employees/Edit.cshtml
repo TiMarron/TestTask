@@ -9,10 +9,10 @@
 @using (Html.BeginForm("Edit", "Employees", FormMethod.Post, new { @class = "form-horizontal" }))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-1" })
+        @Html.LabelFor(m => m.Name, new { @class = "control-label col-md-1" })
         <div class="col-md-4">
             <input class="form-control" data-val="true" id="Name" name="Name" type="text" value="@Model.Name" data-autocomplete-source='@Url.Action("AutocompleteName", "Employees")'>
-            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
         </div>
     </div>
         <div class="form-group">
@@ -23,28 +23,28 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.Years, htmlAttributes: new { @class = "control-label col-md-1" })
+            @Html.LabelFor(model => model.Years, new { @class = "control-label col-md-1" })
             <div class="col-md-4">
-                @Html.EditorFor(model => model.Years, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Years, new { htmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(model => model.Years, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.Sex, htmlAttributes: new { @class = "control-label col-md-1" })
+            @Html.LabelFor(model => model.Sex, new { @class = "control-label col-md-1" })
             <div class="col-md-4">
                 @Html.DropDownList("Sex", new SelectList(new string[] { "Мужской", "Женский" }), new { @class = "form-control selectpicker" })
                 @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.DepartmentId, htmlAttributes: new { @class = "control-label col-md-1" })
+            @Html.LabelFor(m => m.DepartmentId, new { @class = "control-label col-md-1" })
             <div class="col-md-4">
                 @Html.DropDownListFor(m => m.DepartmentId, new SelectList(Model.DepartmentList, "Id", "Name", Model.DepartmentId), new { @class = "form-control selectpicker" })
                 @Html.ValidationMessageFor(m => m.DepartmentId, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.ProgrammingLanguageId, htmlAttributes: new { @class = "control-label col-md-1" })
+            @Html.LabelFor(m => m.ProgrammingLanguageId, new { @class = "control-label col-md-1" })
             <div class="col-md-4">
                 @Html.DropDownListFor(m => m.ProgrammingLanguageId, new SelectList(Model.ProgrammingLanguageList, "Id", "Name", Model.ProgrammingLanguageId), new { @class = "form-control selectpicker" })
                 @Html.ValidationMessageFor(m => m.ProgrammingLanguageId, "", new { @class = "text-danger" })
