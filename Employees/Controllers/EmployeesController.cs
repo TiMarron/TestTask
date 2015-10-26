@@ -98,7 +98,7 @@ namespace Employees.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(EmployeeEditViewModel model)
+        public ActionResult Edit(int id, EmployeeEditViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -117,7 +117,7 @@ namespace Employees.Controllers
                 return View(empl);
             }
 
-            var employee = db.Employees.Single(e => e.Id == model.Id);
+            var employee = db.Employees.Single(e => e.Id == id);
             employee.Name = model.Name;
             employee.SecondName = model.SecondName;
             employee.Sex = model.Sex;

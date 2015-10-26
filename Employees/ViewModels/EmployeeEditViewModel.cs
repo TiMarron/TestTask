@@ -11,9 +11,6 @@ namespace Employees.ViewModels
 {
     public class EmployeeEditViewModel
     {
-        [Required]
-        [HiddenInput]
-        public int Id { get; set; }
         [Required(ErrorMessage = "Give the man a name")]
         [DisplayName("Имя")]
         public string Name { get; set; }
