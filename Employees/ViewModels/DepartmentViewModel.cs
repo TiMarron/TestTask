@@ -14,6 +14,6 @@ namespace Employees.ViewModels
         public string Name { get; set; }
         [Required(ErrorMessage = "Укажите этаж!")]
         [DisplayName("Этаж, №")]
-        public int Floor { get; set; }
+        public int? Floor { get; set; }
     }
 }

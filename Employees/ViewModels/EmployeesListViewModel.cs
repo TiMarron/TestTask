@@ -16,7 +16,7 @@ namespace Employees.ViewModels
         [DisplayName("Фамилия")]
         public string SecondName { get; set; }
         [DisplayName("Возраст")]
-        public int Years { get; set; }
+        public int? Years { get; set; }
         [DisplayName("Отдел")]
         public string Department { get; set; }
         [DisplayName("Язык")]

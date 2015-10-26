@@ -1,80 +1,30 @@
-﻿body {
-    font-size: 13px;
-    font-family: Verdana, Arial, Helvetica, Sans-Serif;
-    margin: 0;
-    background-color: white;
-}
-  
-nav{
-    display: block;
-    padding: 0 40px;
-    background-color: darkgray;
-    min-height: 40px;
-
-}
-  
-.menu {
-    padding-left:0px;
-}
-.menu ul, .menu li{
-    list-style:none;
-    display: inline-block;
-}
-.menu li a {
-    display: inline-block;
-    line-height: 40px;
-    padding: 0 15px;
-}
-.menu li a:hover {
-    background-color: lightgray;
-}
-.content {
-    padding: 0 40px;
-}
-table {
-   vertical-align:middle;
-   text-align:left;  
-   border-collapse: collapse;
- }
-.header {
-    font-weight:bold;
-}
-tr:nth-child(even) {
-    background-color: linen;
-}
- td,th {
-    padding: 5px 10px;
- }
- tr:hover {
-     background-color: lightsalmon;
- }
- tr:first-child:hover {
-     background-color: white;
- }
- .text-box {
-     width: 200px;
- }
- select{
-     width: 204px;
- }
- .lable {
-     width: 100px;
-     padding-bottom: 15px;
-     padding-right: 5px;
-     display: inline-block;
- }
- .ui-autocomplete {
-     background-color: rgb(237, 237, 237);
+﻿ .ui-autocomplete {
      width: 194px;
-     padding: 0;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
  }
  .ui-menu-item {
-     list-style: none;
-     padding: 5px;
+    list-style: none;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
      cursor: pointer;
  }
  .ui-state-focus {
-     background-color: lightgray;
+     color: #ffffff;
+    text-decoration: none;
+    background-color: #428bca;
  }
  .ui-helper-hidden-accessible {
      display: none;

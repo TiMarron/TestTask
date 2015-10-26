@@ -4,23 +4,31 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>
+    @Styles.Render("~/Content/css")
 </head>
 
 <body>
-<nav>
-    <ul class="menu">
-        <li>@Html.ActionLink("Список сотрудников", "Index", "Employees")</li>
-        <li>@Html.ActionLink("Добавить ещё одного", "Add", "Employees")</li>
-        <li>@Html.ActionLink("Добавить язык", "Add", "ProgrammingLanguage")</li>
-        <li>@Html.ActionLink("Добавить отдел", "Add", "Department")</li>
-    </ul>
-</nav>
-<div class="content">
-    @RenderBody()
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            @Html.ActionLink("Список сотрудников", "Index", "Employees", null, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Добавить ещё одного", "Add", "Employees")</li>
+                <li>@Html.ActionLink("Добавить язык", "Add", "ProgrammingLanguage")</li>
+                <li>@Html.ActionLink("Добавить отдел", "Add", "Department")</li>
+            </ul>
+        </div>
+        </div>
 </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
     @Scripts.Render("~/bundles/js/jquery")
     @Scripts.Render("~/bundles/js/Employees/autocomplite")
+    @Scripts.Render("~/bundles/js/bootstrap")
 </body>
 </html>
 

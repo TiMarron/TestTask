@@ -40,8 +40,8 @@ namespace Employees.Controllers
         {
             var model = new EmployeeAddViewModel
             {
-                DepartmentSelectList = new SelectList(db.Departments, "Id", "Name"),
-                ProgrammingLanguageSelectList = new SelectList(db.ProgrammingLanguages, "Id", "Name")
+                DepartmentList = db.Departments,
+                ProgrammingLanguageList = db.ProgrammingLanguages
             };
 
             return View(model);
@@ -55,8 +55,14 @@ namespace Employees.Controllers
             {
                 var empl = new EmployeeAddViewModel
                 {
-                    DepartmentSelectList = new SelectList(db.Departments, "Id", "Name"),
-                    ProgrammingLanguageSelectList = new SelectList(db.ProgrammingLanguages, "Id", "Name")
+                    Name = model.Name,
+                    SecondName = model.SecondName,
+                    Sex = model.Sex,
+                    Years = model.Years,
+                    DepartmentId = model.DepartmentId,
+                    DepartmentList = db.Departments,
+                    ProgrammingLanguageId = model.ProgrammingLanguageId,
+                    ProgrammingLanguageList = db.ProgrammingLanguages
                 };
 
                 return View(empl);
@@ -83,8 +89,10 @@ namespace Employees.Controllers
                 SecondName = employee.SecondName,
                 Sex = employee.Sex,
                 Years = employee.Years,
-                DepartmentSelectList = new SelectList(db.Departments, "Id", "Name", employee.DepartmentId),
-                ProgrammingLanguageSelectList = new SelectList(db.ProgrammingLanguages, "Id", "Name", employee.ProgrammingLanguageId)
+                DepartmentId = employee.DepartmentId,
+                DepartmentList = db.Departments,
+                ProgrammingLanguageId = employee.ProgrammingLanguageId,
+                ProgrammingLanguageList = db.ProgrammingLanguages
             };
             return View(model);
         }
@@ -101,9 +109,9 @@ namespace Employees.Controllers
                     Sex = model.Sex,
                     Years = model.Years,
                     DepartmentId = model.DepartmentId,
+                    DepartmentList = db.Departments,
                     ProgrammingLanguageId = model.ProgrammingLanguageId,
-                    DepartmentSelectList = new SelectList(db.Departments, "Id", "Name"),
-                    ProgrammingLanguageSelectList = new SelectList(db.ProgrammingLanguages, "Id", "Name")
+                    ProgrammingLanguageList = db.ProgrammingLanguages
                 };
 
                 return View(empl);
@@ -149,4 +157,4 @@ namespace Employees.Controllers
             return Json(modelsList, JsonRequestBehavior.AllowGet);
         }
     }
-}
+} 

@@ -5,21 +5,27 @@
 }
 
 <h2>Добавление отдела</h2>
-@using (Html.BeginForm())
+<hr />
+@using (Html.BeginForm("Add", "Department", FormMethod.Post, new { @class = "form-horizontal" }))
 {
-    @Html.ValidationSummary()
-    <div>
-        <div class="lable">@Html.LabelFor(m => m.Name)</div>
-        @Html.EditorFor(m => m.Name)
-        @Html.ValidationMessageFor(m => m.Name)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-1" })
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
     </div>
-    <div>
-        <div class="lable">@Html.LabelFor(m => m.Floor)</div>
-        @Html.EditorFor(m => m.Floor)
-        @Html.ValidationMessageFor(m => m.Floor)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Floor, htmlAttributes: new { @class = "control-label col-md-1" })
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.Floor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Floor, "", new { @class = "text-danger" })
+        </div>
     </div>
-    <div>
-        <input type="submit" value="Добавить" />
-        <a href="/">Вернуться на главную</a>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-4">
+            <input type="submit" value="Добавить" class="btn btn-default" />
+            <a href="/" class="btn btn-default">Вернуться на главную</a>
+        </div>
     </div>
 }

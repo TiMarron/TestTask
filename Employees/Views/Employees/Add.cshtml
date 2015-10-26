@@ -6,51 +6,56 @@
 
 <div>
     <h2>Добавление сотрудника</h2>
-    @using (Html.BeginForm())
+    <hr />
+    @using (Html.BeginForm("Add", "Employees", FormMethod.Post, new { @class = "form-horizontal" }))
     {
-        <div>
-            <div class="lable">@Html.LabelFor(m => m.Name)</div>
-            <input class="text-box single-line" data-val="true" id="Name" name="Name" type="text" value="" data-autocomplete-source='@Url.Action("AutocompleteName", "Employees")'>
-            @Html.ValidationMessageFor(m => m.Name)
-        </div>
-        <div>
-            <div class="lable">
-                @Html.LabelFor(m => m.SecondName)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-4">
+                <input class="form-control" data-val="true" id="Name" name="Name" type="text" value="@Model.Name" data-autocomplete-source='@Url.Action("AutocompleteName", "Employees")'>
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
-            <input class="text-box single-line" data-val="true" id="SecondName" name="SecondName" type="text" value="" data-autocomplete-source='@Url.Action("AutocompleteSecondName", "Employees")'>
-            @Html.ValidationMessageFor(m => m.SecondName)
         </div>
-        <div>
-            <div class="lable">
-                @Html.LabelFor(m => m.Years)
+        <div class="form-group">
+            @Html.LabelFor(m => m.SecondName, new {@class = "control-label col-md-1" })
+            <div class="col-md-4">
+                <input class="form-control" data-val="true" id="SecondName" name="SecondName" type="text" value="@Model.SecondName" data-autocomplete-source='@Url.Action("AutocompleteSecondName", "Employees")'>
+                @Html.ValidationMessageFor(m => m.SecondName, "", new { @class = "text-danger" })
             </div>
-            @Html.EditorFor(m => m.Years)
-            @Html.ValidationMessageFor(m => m.Years)
         </div>
-        <div>
-            <div class="lable">
-                @Html.LabelFor(m => m.Sex)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Years, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Years, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Years, "", new { @class = "text-danger" })
             </div>
-            @Html.DropDownList("Sex", new SelectList(new[] {"Мужской", "Женский"}))
-            @Html.ValidationMessageFor(m => m.Sex)
         </div>
-        <div>
-            <div class="lable">
-                @Html.LabelFor(m => m.DepartmentSelectList)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sex, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-4">
+                @Html.DropDownList("Sex", new SelectList(new string[] {"Мужской", "Женский" }), "Выбери пол", new { @class = "form-control selectpicker" })
+                @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
             </div>
-            @Html.DropDownListFor(m => m.DepartmentId, Model.DepartmentSelectList)
-            @Html.ValidationMessageFor(m => m.DepartmentId)
         </div>
-        <div>
-            <div class="lable">
-                @Html.LabelFor(m => m.ProgrammingLanguageId)
+        <div class="form-group">
+            @Html.LabelFor(m => m.DepartmentId, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.DepartmentId, new SelectList(Model.DepartmentList, "Id", "Name", Model.DepartmentId), "Выберите отдел", new { @class = "form-control selectpicker" })
+                @Html.ValidationMessageFor(m => m.DepartmentId, "", new { @class = "text-danger" })
             </div>
-            @Html.DropDownListFor(m => m.ProgrammingLanguageId, Model.ProgrammingLanguageSelectList)
-            @Html.ValidationMessageFor(m => m.ProgrammingLanguageId)
         </div>
-        <div>
-            <input type="submit" value="Добавить"/>
-            <a href="/">Вернуться на главную</a>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProgrammingLanguageId, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.ProgrammingLanguageId, new SelectList(Model.ProgrammingLanguageList, "Id", "Name", Model.ProgrammingLanguageId),"Выберите язык", new { @class = "form-control selectpicker" })
+                @Html.ValidationMessageFor(m => m.ProgrammingLanguageId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Добавить" class="btn btn-default"/>
+                <a href="/" class="btn btn-default">Вернуться на главную</a>
+            </div>
         </div>
     }
  </div>

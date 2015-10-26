@@ -11,7 +11,7 @@ namespace Employees.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string SecondName { get; set; }
-        public int Years { get; set; }
+        public int? Years { get; set; }
         public string Sex { get; set; }
         public int? DepartmentId { get; set; }
         public virtual Department Department { get; set; }
